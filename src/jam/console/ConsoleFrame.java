@@ -59,7 +59,8 @@ public class ConsoleFrame extends DocumentFrame {
 		textArea.setRows( 25 );
 		textArea.setColumns( 80 );
 		textArea.setEditable(false);
-		textArea.setFont(new java.awt.Font("Monospaced", 0, 12));
+		Font font = textArea.getFont();
+		textArea.setFont(new java.awt.Font("Monospaced", 0, font.getSize() * 12/10));
 
 		JScrollPane scrollPane = new JScrollPane(textArea);
 		scrollPane.setVerticalScrollBarPolicy(javax.swing.JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
